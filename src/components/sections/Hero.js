@@ -52,6 +52,17 @@ const Hero = ({
     bottomDivider && 'has-bottom-divider'
   );
 
+
+  let invertMobile = false;
+  let invertDesktop = false;
+  let alignTop = false;
+  const splitClasses = classNames(
+    'split-wrap',
+    invertMobile && 'invert-mobile',
+    invertDesktop && 'invert-desktop',
+    alignTop && 'align-top'
+  );
+
   return (
     <section
       {...props}
@@ -61,38 +72,38 @@ const Hero = ({
         <div className={innerClasses}>
           <div className="hero-content">
             <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
-              Education of the future. <span className="text-color-primary">Today.</span>
+              Education of the Future. <span className="text-color-primary">Today.</span>
             </h1>
-            <div className="container-xs">
-              <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                We gonna make your classes a much better experience<br/>(and get rich by doing that)
-                </p>
-              <div className="reveal-from-bottom" data-reveal-delay="600">
-                <ButtonGroup>
-                  <Button tag="a" color="primary" wideMobile href="https://cruip.com/">
-                    Get started
-                    </Button>
-                  <Button tag="a" color="dark" wideMobile href="https://github.com/cruip/open-react-template/">
-                    View on Github
-                    </Button>
-                </ButtonGroup>
-              </div>
-            </div>
           </div>
           <div className="hero-figure reveal-from-bottom illustration-element-01" data-reveal-value="20px" data-reveal-delay="800">
-            <a
-              data-video="https://player.vimeo.com/video/174002812"
-              href="#0"
-              aria-controls="video-modal"
-              onClick={openModal}
-            >
-              <Image
-                className="has-shadow"
-                src={require('./../../assets/images/video-placeholder.jpg')}
-                alt="Hero"
-                width={896}
-                height={504} />
-            </a>
+
+
+            <div className={splitClasses}>
+              <div className="split-item">
+                <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
+                  <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
+                    Interactive Negotiation Simulation
+                  </div>
+                  <h3 className="mt-0 mb-12">
+                    The Golden Nugget Game
+                  </h3>
+                  <p className="m-0">
+                    Developed with Prof. John Richardson of MIT, the Golden Nugget Game uses a real-time game to educate on various negotiation concepts in a fun, intuitive and easy-to-use platform
+                  </p>
+                </div>
+                <div className={
+                  classNames(
+                    'split-item-image center-content-mobile reveal-from-bottom',
+                    'split-item-image-fill'
+                  )}
+                     data-reveal-container=".split-item">
+                  <Image
+                    src={'./example.png'}
+                    alt="Features split 01"
+                    width={677}/>
+                </div>
+              </div>
+            </div>
           </div>
           <Modal
             id="video-modal"

@@ -37,6 +37,7 @@ const App = () => {
       children={() => (
         <Switch>
           <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
+          <AppRoute exact path="/op-simulator" component={Home} layout={LayoutDefault} />
         </Switch>
       )} />
   );

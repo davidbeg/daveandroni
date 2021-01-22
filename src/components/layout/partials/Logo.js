@@ -10,7 +10,6 @@ const Logo = ({
 
   const classes = classNames(
     'brand',
-    'logo',
     className
   );
 
@@ -20,7 +19,12 @@ const Logo = ({
       className={classes}
     >
       <h4 className="m-0">
-        <div style={{backgroundColor: ''}}>Dave & Roni</div>
+        <Image
+          src={'logo.png'}
+          alt="Open"
+          width={160}
+           />
+        <div>Third Square Education</div>
       </h4>
     </div>
   );
