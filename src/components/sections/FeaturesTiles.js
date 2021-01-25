@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
+import {Link} from "react-router-dom";
 
 const propTypes = {
   ...SectionTilesProps.types
@@ -58,6 +59,7 @@ const FeaturesTiles = ({
           <SectionHeader data={sectionHeader} className="center-content" />
           <div className={tilesClasses}>
 
+            <a href="http://www.linkedin.com/in/ronigrader/">
             <div className="tiles-item reveal-from-bottom">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
@@ -69,17 +71,21 @@ const FeaturesTiles = ({
                       height={164} />
                   </div>
                 </div>
-                <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">
-                    Roni Grader
-                    </h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
-                </div>
+                  <div className="features-tiles-item-content">
+                    <h4 className="mt-0 mb-8">
+                      Roni Grader
+                      </h4>
+                    <p className="m-0 text-sm">
+                      BisDev | Strategy
+                      <br/>
+                      MIT | IAF | BCG
+                      </p>
+                  </div>
               </div>
             </div>
+            </a>
 
+            <a href={"https://www.linkedin.com/in/davidbegun/"}>
             <div className="tiles-item reveal-from-bottom" data-reveal-delay="200">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
@@ -96,12 +102,14 @@ const FeaturesTiles = ({
                     Dave Begun
                     </h4>
                   <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
+                    Technology | Product
+                    <br/>
+                    MIT | 8200 | PayPal
                     </p>
                 </div>
               </div>
             </div>
-
+            </a>
           </div>
         </div>
       </div>

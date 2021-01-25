@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
-import ButtonGroup from '../elements/ButtonGroup';
-import Button from '../elements/Button';
 import Image from '../elements/Image';
 import Modal from '../elements/Modal';
 
@@ -72,11 +70,29 @@ const Hero = ({
         <div className={innerClasses}>
           <div className="hero-content">
             <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
-              Education of the Future. <span className="text-color-primary">Today.</span>
+              Future of Education. <span className="text-color-primary">Today.</span>
             </h1>
           </div>
           <div className="hero-figure reveal-from-bottom illustration-element-01" data-reveal-value="20px" data-reveal-delay="800">
 
+            <div className={
+              classNames(
+                'split-item-image center-content-mobile reveal-from-bottom',
+                'split-item-image-fill'
+              )}
+                 style={{position: 'relative'}}
+                 >
+            <Image
+              src={'./teacher.svg'}
+              alt="Features split 01"
+              width={900}/>
+            </div>
+
+            <div className="hero-content" style={{margin: '80px'}}>
+              <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
+                <span className="text-color-primary">Portfolio</span> Projects
+              </h1>
+            </div>
 
             <div className={splitClasses}>
               <div className="split-item">
@@ -103,8 +119,35 @@ const Hero = ({
                     width={677}/>
                 </div>
               </div>
+              <div className="split-item">
+                <div className="split-item-content center-content-mobile reveal-from-right" data-reveal-container=".split-item">
+                  <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
+                    Organizational Processes
+                  </div>
+                  <h3 className="mt-0 mb-12">
+                    CorpConvince
+                  </h3>
+                  <p className="m-0">
+                    Interactive simulation for Organizational Process. Teach effective tactics, terms, and practices with a hands-on experience.
+                  </p>
+                </div>
+                <div className={
+                  classNames(
+                    'split-item-image center-content-mobile reveal-from-bottom',
+                    'split-item-image-fill'
+                  )}
+                     data-reveal-container=".split-item">
+                  <Image
+                    src={'./example2.png'}
+                    alt="Features split 02"
+                    width={400}
+                    height={296} />
+                </div>
+              </div>
             </div>
           </div>
+
+
           <Modal
             id="video-modal"
             show={videoModalActive}

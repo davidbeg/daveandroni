@@ -19,12 +19,14 @@ const Logo = ({
       className={classes}
     >
       <h4 className="m-0">
+        <Link to="/">
         <Image
           src={'logo.png'}
           alt="Open"
           width={160}
            />
         <div>Third Square Education</div>
+        </Link>
       </h4>
     </div>
   );
