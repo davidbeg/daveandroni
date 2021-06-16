@@ -13,6 +13,7 @@ import LayoutDefault from './layouts/LayoutDefault';
 // Views 
 import Home from './views/Home';
 import OP from './views/OP';
+import BAUFS from './views/BAUFS';
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 
 // Initialize Google Analytics
@@ -50,6 +51,7 @@ const App = () => {
         <Switch>
           <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
           <AppRoute exact path="/op-simulator" component={OP} layout={LayoutDefault} />
+          <AppRoute exact path="/bloomin-brands" component={BAUFS} layout={LayoutDefault} />
         </Switch>
       )} />
   </MuiThemeProvider>
